@@ -4,9 +4,71 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-	<link rel="stylesheet" href="/dataSort/sort/css/style.css">
+	<link rel="stylesheet" href="/app/prd/styles/app.css">
 </head>
 <body>
+	<!-- <div ng-controller="democon">
+		<ul>
+			<li ng-repeat="val in user">
+				<b>用户名{{$index}}：{{val.name}}</b> - 
+				<span>邮箱{{$index}}：{{val.email}}</span>
+			</li>
+		</ul>
+		<h3 ng-show="isShow">是否显示？</h3>
+		<h3 ng-hide="isShow">是否隐藏？</h3>
+		<h3 ng-if="isShow">是否if？</h3>
+	</div> -->
+	<!-- <div ng-controller="democon">
+		<input type="text" ng-model="counter">
+		<input type="button" value="+" ng-click="add()">
+	</div> -->
+	<!-- <div ng-controller="democon">
+		<input type="text" ng-model="item" ng-keyup="addItem($event)">
+		<ul>
+			<li ng-repeat="it in items track by it">{{it}}</li>
+		</ul>
+	</div> -->
+	<!-- <div ng-controller="democon">
+		<ul>
+			<li ng-repeat="pen in peoples | limitTo:3 | orderBy:'age'">
+				<p>年龄:<span ng-bind="pen.age | currency:'#'"><span></p>
+				<p>姓名:<span  ng-class="{true:'has',false:'nohas'}[pen.ishas]" ng-bind="pen.name  | lowercase"><span></p>
+				<p>城市:<span ng-bind="pen.country | uppercase"><span></p>
+				<p>出生日期:<span ng-bind="pen.birthday  | date:'yyyy年MM月dd日'"><span></p>
+			</li>
+		</ul>
+	</div> -->
+	<!-- <div class="search" ng-controller="democon">
+		<input type="text" ng-model="searchText">
+		<table>
+			<thead>
+				<tr>
+					<td>年龄</td>
+					<td>姓名</td>
+					<td>城市</td>
+					<td>生日</td>
+				</tr>
+			</thead>
+			第一种匹配方式
+			<tbody>
+				<tr ng-repeat="p in peoples | filter:searchText">
+					<td>{{p.age}}</td>
+					<td>{{p.name}}</td>
+					<td>{{p.country}}</td>
+					<td>{{p.birthday}}</td>
+				</tr>
+			</tbody>
+			第二种匹配方式
+			<tbody>
+				<tr ng-repeat="p in peoples | filter:search:val">
+					<td>{{p.age}}</td>
+					<td>{{p.name}}</td>
+					<td>{{p.country}}</td>
+					<td>{{p.birthday}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div> -->
 	<div ng-controller="dmCtl2" class="box">
 		<input type="text" ng-model="findVal">
 		<table>
@@ -30,8 +92,8 @@
 			</tbody>
 		</table>
 	</div>
-	<script src="/dataSort/sort/js/angular.min.js"></script>
-	<script src="/dataSort/sort/js/jquery1.7.js"></script>
-	<script src="/dataSort/sort/js/script.js"></script>
+	<script src="/app/src/scripts/libs/angular.min.js"></script>
+	<script src="/app/src/scripts/libs/jquery1.7.js"></script>
+	<script src="/app/prd/scripts/app.js"></script>
 </body>
 </html>
