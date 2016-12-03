@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<link rel="stylesheet" href="/sort/css/style.css">
+</head>
+<body>
+	<div ng-controller="dmCtl2" class="box">
+		<input type="text" ng-model="findVal">
+		<table>
+			<thead>
+				<tr>
+					<td ng-click="toggleSort($event,'firstname')">Firstname<span></span></td>
+					<td ng-click="toggleSort($event,'lastname')">Lastname<span></span></td>
+					<td ng-click="toggleSort($event,'salary')">Salary<span></span></td>
+					<td ng-click="toggleSort($event,'salary')">Salary<span></span></td>
+					<td ng-click="toggleSort($event,'birthday')">Birthday<span></span></td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="va in datas|filter:search:val|orderBy:order">
+					<td>{{va.firstname}}</td>
+					<td>{{va.lastname}}</td>
+					<td>{{va.salary}}</td>
+					<td>{{va.salary|currency:'¥'}}</td>
+					<td>{{va.birthday}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script src="/sort/js/angular.min.js"></script>
+	<script src="/sort/js/jquery1.7.js"></script>
+	<script src="/sort/js/script.js"></script>
+</body>
+</html>
